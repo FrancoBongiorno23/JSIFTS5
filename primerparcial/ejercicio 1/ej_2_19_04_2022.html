@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Logica computacional</title>
+<link rel="stylesheet" href="">
+
+</head>
+
+<body>
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Nota final</p>
+</div>
+<div class="contenido">
+	<div class="principal">
+<h1>Promedio del alumno</h1>
+
+<script>
+
+	var notaUno, notaDos, notaTres;
+
+	notaUno=prompt("Introduzca la primer nota por favor");
+
+		while (notaUno>10 || notaUno<0 || isNaN(notaUno)) {
+			notaUno=prompt("Introduzca la primer nota correcta por favor");
+		}
+
+	notaDos=prompt("Introduzca su segunda nota por favor");
+
+		while (notaDos>10 || notaDos<0 || isNaN(notaDos)) {
+			notaDos=prompt("Introduzca la segunda nota correcta por favor");
+	}	
+
+    notaTres=prompt("Introduzca su tercer nota por favor");
+
+	while (notaTres>10 || notaDos<0 || isNaN(notaDos)) {
+			notaTres=prompt("Introduzca la tercer nota correcta por favor");
+	}	
+
+    let notaFinal=0;
+
+    notaFinal=((parseFloat(notaUno)+parseFloat(notaDos)+parseFloat(notaTres))/3);
+
+	document.write("<p>");
+
+	document.write(notaFinal) 			
+		
+	if (notaFinal >= 7) {
+			alert("El alumno obtuvo un " + notaFinal + ". Felicidades!, ha promocinado.");
+		}
+		else if (notaFinal >= 4 && notaFinal < 7) {
+			alert("El alumno obtuvo un " + notaFinal + ". Felicidades!, ha aprobado, pero debe de ir a final");
+		}
+		else {
+			alert("El alumno obtuvo un " + notaFinal + ". Lo siento!, ha recursado.");
+		}
+		;
+
+	document.write("</p>");
+
+
+
+</script>
+
+</div>
+</div>
+
+</div>
+</body>
+</html>
